@@ -7,7 +7,7 @@
 
 #define NUM_LEDS 164
 #define DATA_PIN 13
-#define BRIGHTNESS 60
+#define BRIGHTNESS 40
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
 CRGB leds[NUM_LEDS];
@@ -37,14 +37,14 @@ void loop() {
   if (sensorValue0 > 600) {
     Serial.println("----- Sensor 0 ACTIVE-----");
     for (int i = 0; i < NUM_LEDS; i++) {
-      leds[i] = CRGB(255, 255, 255);
+      leds[i] = CRGB(255, 255, 200);
     }
   }
   
   if (sensorValue1 > 600) {
     Serial.println("----- Sensor 1 ACTIVE-----");
     for (int i = 0; i < NUM_LEDS; i++) {
-      leds[i] = CRGB(255, 255, 255);
+      leds[i] = CRGB(255, 255, 200);
     }
   }
 
