@@ -7,7 +7,7 @@ The goal of this project is to have animated RGB WS2812B stair lights underneath
 This requires the FastLED library - https://github.com/FastLED/FastLED
 
 Components:
-WS2812B LED strip \n
-PIR motion sensors (x2) \n
-1000uF capacitor \n
-5v 10a power supply \n
+* WS2812B LED strip
+* PIR motion sensors (x2)
+* 1000uF capacitor
+* 5v 10a power supply
