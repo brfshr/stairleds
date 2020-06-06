@@ -49,10 +49,10 @@ void loop() {
   }
 
   FastLED.show();
-  delay(5000);
+  delay(7000); // time LEDs are on
   for (int i = 0; i < NUM_LEDS; i++) {
     leds[i] = CRGB::Black;
   }
   FastLED.show();
-  delay(2000);
+  delay(5000); // delay to prevent second sensor fram triggering LEDs to turn on again
 }
