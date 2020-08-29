@@ -22,7 +22,7 @@ View of the lights going down the stairs.
 The LEDs from the other side of the railing.
 ![](images/stairview2.JPG)
 
-Bottom motion sensor is connected directly to the LED strip. There's a wire running along side the LEDs to the Arduino.
+Bottom motion sensor is connected directly to the ground and 5V on the LED strip. The signal wire is running along side the LEDs to the Arduino.
 ![](images/bottomsensor.JPG)
 
 Top motion sensor. Heat shrink tubing was used at the top and bottom to conceal solder points.
