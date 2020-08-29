@@ -1,6 +1,7 @@
 /*
- * WS2812B LED strip on hand rail for stairs. Sensors at the top
+ * WS2812B LED strip underneath staircase handrail. PIR sensors at the top
  * and the bottom.
+ * 
  */
 
 #include <FastLED.h>
@@ -10,10 +11,10 @@
 #define BRIGHTNESS 40
 #define LED_TYPE WS2812B
 #define COLOR_ORDER GRB
-CRGB leds[NUM_LEDS];
+CRGB leds[NUM_LEDS]; // setup leds object to access string
 
-int sensorPin0 = A0;
-int sensorPin1 = A1;
+int sensorPin0 = A0; // bottom sensor
+int sensorPin1 = A1; // top sensor
 int ledPin = 13;
 int sensorValue0 = 0;
 int sensorValue1 = 0;
@@ -35,14 +36,14 @@ void loop() {
   } while(sensorValue0 < 600 && sensorValue1 < 600);
   
   if (sensorValue0 > 600) {
-    Serial.println("----- Sensor 0 ACTIVE-----");
+    Serial.println("----- BOTTOM SENSOR (0) ACTIVE -----");
     for (int i = 0; i < NUM_LEDS; i++) {
       leds[i] = CRGB(255, 255, 200);
     }
   }
   
   if (sensorValue1 > 600) {
-    Serial.println("----- Sensor 1 ACTIVE-----");
+    Serial.println("----- TOP SENSOR (1) ACTIVE -----");
     for (int i = 0; i < NUM_LEDS; i++) {
       leds[i] = CRGB(255, 255, 200);
     }
@@ -54,5 +55,5 @@ void loop() {
     leds[i] = CRGB::Black;
   }
   FastLED.show();
-  delay(5000); // delay to prevent second sensor fram triggering LEDs to turn on again
+  delay(5000); // delay to prevent oposite sensor fram triggering LEDs to turn on again
 }
