@@ -6,10 +6,12 @@ The goal of this project is to have animated lighting underneath the handrail of
 
 This project requires the FastLED library - https://github.com/FastLED/FastLED
 
+See Arduino circuit design at the bottom.
+
 Components:
 * WS2812B LED strip
 * PIR motion sensors (x2)
-* 1000uF capacitor
+* 330 Ohm resistor
 * 5v 10a power supply
 * Solid single core wire (22AWG)
 * Head shrink tubing
@@ -31,3 +33,6 @@ The LED strip had pre-installed adhesive that made mounting it to the underside 
 
 The Arduino is hanging at the top of the stairs using the mount that it came with. I still need to 3D print a case and tidy up the wiring. :)
 ![](images/arduino.jpeg)
+
+Arduino circuit design
+![](images/circuit.JPG)

@@ -1,7 +1,6 @@
 /*
  * WS2812B LED strip underneath staircase handrail. PIR sensors at the top
  * and the bottom.
- * 
  */
 
 #include <FastLED.h>
